@@ -2,14 +2,13 @@ import json
 import tweepy
 from tweepy import OAuthHandler
 from collections import Counter
+from twitter import get_auth, twitter_api 
 
-CONSUMER_KEY = 'qljZGMK5DPqwLnDbsmYFlhOAO'
-CONSUMER_SECRET = 'ZpngIgEo3MBv6UazZs50hACM0MdUiA2IyRTWoTbAjbieRwwEDO'
-OAUTH_TOKEN = '780690706184622080-Pr6M7nCa27eSn4xdGxS3HHT3rvNDSay'
-OAUTH_TOKEN_SECRET = 'Utaf5C7Z8pcOPGjSlcsSh9msFYzqFg6hcxdOlvJKLJWM0'
+api = twitter_api()
 
-auth = OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-auth.set_access_token(OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
+auth = get_auth()
+
+api = tweepy.API(auth)
 
 api = tweepy.API(auth)
 
