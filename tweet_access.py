@@ -28,4 +28,4 @@ for status in results:
     print(status.user.screen_name)
     print(status.user.profile_image_url_https)
     print(status.user.followers_count)
-    print(status.place) 
+    print(status.place)
